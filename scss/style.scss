@@ -20,6 +20,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     
     a {
         @extend %sharedText;
@@ -157,6 +163,12 @@ form {
     margin: 0 auto;
     width: 328px;
     flex-wrap: wrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     
     .link {
         display: flex;
@@ -215,6 +227,12 @@ footer {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     .btn {
         display: flex;
