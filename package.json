@@ -1,0 +1,19 @@
+{
+  "name": "google-home-page-clone",
+  "version": "1.0.0",
+  "description": "google home page clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montgomeryrd/google-home-page-clone.git"
+  },
+  "author": "Richard Montgomery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montgomeryrd/google-home-page-clone/issues"
+  },
+  "homepage": "https://github.com/montgomeryrd/google-home-page-clone#readme"
+}

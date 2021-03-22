@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+$light-color: #f4f4f4;
+$spectral: 'Spectral', serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+%sharedDots {
+    border-radius: 50%;
+    background: black;
+    width: 2px;
+    height: 2px;
+}
+
+%sharedText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .55em;
+    color: black;
+}
+
+// Navigation Bar
+nav {
+    display: flex;
+    flex-direction: row;
+    
+    a {
+        @extend %sharedText;
+        text-decoration: none;
+    }
+
+    .apps {
+        .row-1 {
+            @extend %sharedDots;
+        }
+    }
+
+    .profile {
+        width: 20px;
+        border-radius: 50%;
+    }
+}
+
+// Main Page Styles
+main {
+    margin-top: 70px;
+    .logo {
+        font-size: 3.8em;
+        font-family: $spectral;
+        letter-spacing: -0.14em;
+        text-align: center;
+
+        .blue {
+            color: rgba(22, 104, 235, 0.911);
+        }
+
+        .red {
+            color: rgb(255, 51, 0);
+        }
+
+        .yellow {
+            color: rgb(255, 187, 0);
+        }
+
+        .green {
+            color: rgb(31, 153, 1);
+        }
+    }
+}
+
+form {
+    width: 365px;
+    margin: 15px auto;
+    border-radius: 20mm;
+    box-shadow: 0px 1px 5px rgb(204, 204, 204);
+
+    .magnifying {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        margin: 6px 10px;
+        transform: scale(.8);
+
+        .lens-frame {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: grey;
+            border-radius: 50%;
+
+            .lens {
+                margin: 1px 1.3px;
+                width: 5.5px;
+                height: 5.5px;
+                background: white;
+                border-radius: 50%;
+            }
+        }
+
+        .handle {
+            margin: 8px 5px;
+            width: 6px;
+            height: 1.5px;
+            background: grey;
+            transform: rotate(45deg);
+        }
+    }
+
+    input {
+        border: none;
+        font-size: .6em;
+        margin-left: 25px;
+        width: 315px;
+        padding: 8px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    .microphone {
+        position: absolute;
+        margin: 8px 5px;
+        width: 8px;
+    }
+}
+
+.icons-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    width: 315px;
+    flex-wrap: wrap;
+    
+    .link {
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+
+        .icon {
+            background: $light-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            
+            .icon-images {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        p {
+            @extend %sharedText;
+            padding-top: 10px;
+            text-align: center;
+            width: 62px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .plus {
+            font-weight: 900;
+        }
+    }
+    
+}
