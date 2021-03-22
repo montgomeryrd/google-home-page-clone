@@ -1,18 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 $light-color: #f4f4f4;
-$spectral: 'Spectral', serif;
+$mont: 'Montserrat', sans-serif;
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-%sharedDots {
-    border-radius: 50%;
-    background: black;
-    width: 2px;
-    height: 2px;
 }
 
 %sharedText {
@@ -25,30 +18,34 @@ $spectral: 'Spectral', serif;
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     
     a {
         @extend %sharedText;
         text-decoration: none;
+        margin: 15px 6px;
     }
 
     .apps {
-        .row-1 {
-            @extend %sharedDots;
-        }
+        width: 10px;
+        height: 10px;
+        margin: 15px 5px 0 10px;
     }
 
     .profile {
-        width: 20px;
+        width: 21px;
         border-radius: 50%;
+        margin: 10px 12px;
     }
 }
 
 // Main Page Styles
 main {
-    margin-top: 70px;
+    margin-top: 55px;
+
     .logo {
-        font-size: 3.8em;
-        font-family: $spectral;
+        font-size: 3.5em;
+        font-family: $mont;
         letter-spacing: -0.14em;
         text-align: center;
 
@@ -72,7 +69,7 @@ main {
 
 form {
     width: 365px;
-    margin: 15px auto;
+    margin: 30px auto 12px auto;
     border-radius: 20mm;
     box-shadow: 0px 1px 5px rgb(204, 204, 204);
 
@@ -110,7 +107,7 @@ form {
 
     input {
         border: none;
-        font-size: .6em;
+        font-size: .7em;
         margin-left: 25px;
         width: 315px;
         padding: 8px;
@@ -136,7 +133,7 @@ form {
     flex-wrap: wrap;
     
     .link {
-        padding: 6px;
+        padding: 10px 6px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -170,6 +167,28 @@ form {
         .plus {
             font-weight: 900;
         }
+    }    
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    .btn {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        border: none;
+        font-size: .5em;
+        color: rgba(22, 104, 235, 0.911);
+        box-shadow: 0px 1px 5px rgb(204, 204, 204);
+        border-radius: 20mm;
+        padding: 5px 12px;
+
+        .pencil {
+            width: 10px;
+            margin-right: 8px;
+        }
     }
-    
 }
