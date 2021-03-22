@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 $light-color: #f4f4f4;
+$select: #e6e6e6;
 $mont: 'Montserrat', sans-serif;
 
 * {
@@ -26,16 +27,35 @@ nav {
         margin: 15px 6px;
     }
 
-    .apps {
-        width: 10px;
-        height: 10px;
-        margin: 15px 5px 0 10px;
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .apps-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        margin: 8px 0 0 5px;
+        border-radius: 50%;
+
+        .apps {
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .apps-container:hover {
+        background: $select;
     }
 
     .profile {
         width: 21px;
         border-radius: 50%;
         margin: 10px 12px;
+        cursor: pointer;
     }
 }
 
@@ -48,6 +68,12 @@ main {
         font-family: $mont;
         letter-spacing: -0.14em;
         text-align: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         .blue {
             color: rgba(22, 104, 235, 0.911);
@@ -68,7 +94,7 @@ main {
 }
 
 form {
-    width: 365px;
+    width: 370px;
     margin: 30px auto 12px auto;
     border-radius: 20mm;
     box-shadow: 0px 1px 5px rgb(204, 204, 204);
@@ -119,8 +145,8 @@ form {
 
     .microphone {
         position: absolute;
-        margin: 8px 5px;
-        width: 8px;
+        margin: 8px 8px;
+        width: 9px;
     }
 }
 
@@ -129,29 +155,43 @@ form {
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
-    width: 315px;
+    width: 328px;
     flex-wrap: wrap;
     
     .link {
-        padding: 10px 6px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-decoration: none;
 
-        .icon {
-            background: $light-color;
+        .select {
+            border-radius: 1mm;
+            padding: 1px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            
-            .icon-images {
-                width: 15px;
-                height: 15px;
+            justify-content: center;
+            height: 70px;
+            width: 70px;
+
+            .icon {
+                background: $light-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                
+                .icon-images {
+                    width: 15px;
+                    height: 15px;
+                }
             }
+        }
+
+        .select:hover {
+            background: $select;
         }
 
         p {
@@ -168,6 +208,7 @@ form {
             font-weight: 900;
         }
     }    
+
 }
 
 footer {
@@ -180,15 +221,20 @@ footer {
         flex-direction: row;
         background: none;
         border: none;
-        font-size: .5em;
+        font-size: .6em;
         color: rgba(22, 104, 235, 0.911);
         box-shadow: 0px 1px 5px rgb(204, 204, 204);
         border-radius: 20mm;
         padding: 5px 12px;
+        cursor: pointer;
 
         .pencil {
             width: 10px;
             margin-right: 8px;
         }
+    }
+
+    .btn:hover {
+        background: #f4faff;
     }
 }
